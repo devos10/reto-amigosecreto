@@ -2,13 +2,13 @@
 //comentario
 
 //creamos un array para almacenar nombres
-
+let amigos= [];
 
 
 //creamos una funcion para agregar amigos 
 
 function agregarAmigo(){
-    let amigos= [];
+
     let nombre =document.getElementById('amigo').value;
     if(nombre==''){
         alert("Por favor, inserte un nombre")
@@ -16,6 +16,15 @@ function agregarAmigo(){
         amigos.push(nombre);
         console.log(amigos);
         document.getElementById('amigo').value='';
-
+        recorrerListaAmigo();
     }
+}
+//creamos una funcion que recorra el arreglo y muestre los nombres en una lista 
+function recorrerListaAmigo(){
+    let lista=document.getElementById('listaAmigos');
+    lista.innerHTML='';
+    for(i=0; i<amigos.length; i++){
+        lista.innerHTML += `<li>${amigos[i]}</li>`;
+    }
+    console.log(amigos);
 }
