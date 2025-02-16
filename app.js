@@ -28,3 +28,17 @@ function recorrerListaAmigo(){
     }
     console.log(amigos);
 }
+
+//creamos funcion para sortear un amigo 
+function sortearAmigo(){
+    if(amigos.length!=0){
+
+        numeroMaximo=amigos.length;
+        let indice = Math.floor(Math.random()*numeroMaximo);
+        console.log(indice);
+        document.getElementById('texto').innerHTML= amigos[indice];
+
+    }
+    
+
+}
