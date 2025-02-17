@@ -27,6 +27,7 @@ function recorrerListaAmigo(){
         lista.innerHTML += `<li>${amigos[i]}</li>`;
     }
     console.log(amigos);
+    
 }
 
 //creamos funcion para sortear un amigo 
@@ -36,9 +37,29 @@ function sortearAmigo(){
         numeroMaximo=amigos.length;
         let indice = Math.floor(Math.random()*numeroMaximo);
         console.log(indice);
-        document.getElementById('texto').innerHTML= amigos[indice];
+        if(indice<=amigos.length){
+            document.getElementById('texto').innerHTML= amigos[indice];
+            console.log(amigos[indice])
 
+
+        }
+        
     }
     
 
 }
+
+function borrar(){
+    if(amigos.length!=0){
+        
+        let lista=document.getElementById('listaAmigos');
+        amigos=0;
+        console.log(amigos.length);
+        lista.innerHTML='';
+        document.getElementById('texto').innerHTML='Sortear Amigo';
+
+        
+    }
+}
+
+
