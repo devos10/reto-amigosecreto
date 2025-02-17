@@ -53,11 +53,10 @@ function borrar(){
     if(amigos.length!=0){
         
         let lista=document.getElementById('listaAmigos');
-        amigos=0;
+        amigos=[];
         console.log(amigos.length);
         lista.innerHTML='';
         document.getElementById('texto').innerHTML='Sortear Amigo';
-        window.location.reload()
         
     }
 }
