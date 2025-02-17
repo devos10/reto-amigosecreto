@@ -57,9 +57,10 @@ function borrar(){
         console.log(amigos.length);
         lista.innerHTML='';
         document.getElementById('texto').innerHTML='Sortear Amigo';
-
+        window.location.reload()
         
     }
 }
+
 
 
