@@ -17,6 +17,7 @@ function agregarAmigo(){
         console.log(amigos);
         document.getElementById('amigo').value='';
         recorrerListaAmigo();
+        
     }
 }
 //creamos una funcion que recorra el arreglo y muestre los nombres en una lista 
@@ -26,7 +27,9 @@ function recorrerListaAmigo(){
     for(i=0; i<amigos.length; i++){
         lista.innerHTML += `<li>${amigos[i]}</li>`;
     }
+    document.getElementById("borrar__btn").removeAttribute('disabled');
     console.log(amigos);
+    
     
 }
 
@@ -44,6 +47,9 @@ function sortearAmigo(){
 
         }
         
+    }else{
+        alert("No hay nada que sortear, por favor, inserte un nombre")
+
     }
     
 
@@ -57,6 +63,7 @@ function borrar(){
         console.log(amigos.length);
         lista.innerHTML='';
         document.getElementById('texto').innerHTML='Sortear Amigo';
+        document.querySelector('#borrar__btn').setAttribute('disabled','true');
         
     }
 }
